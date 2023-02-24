@@ -1,0 +1,507 @@
+<!-- Stackoverflow story template page adapted by Randi Ortiz -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Randi Ortiz - Resume</title>
+    <link rel="stylesheet" type="text/css" href="css/bk-stacks.css">
+    <link rel="stylesheet" type="text/css" href="css/bk-primary.css">
+    <link rel="stylesheet" type="text/css" href="css/bk-story.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script>
+        function getDateDifference(startDate, endDate) { // @see https://stackoverflow.com/a/51441904/9056410
+            if (startDate > endDate) {
+                console.error('Start date must be before end date');
+                return null;
+            }
+            var startYear = startDate.getFullYear();
+            var startMonth = startDate.getMonth();
+            var startDay = startDate.getDate();
+
+            var endYear = endDate.getFullYear();
+            var endMonth = endDate.getMonth();
+            var endDay = endDate.getDate();
+
+            // We calculate February based on end year as it might be a leep year which might influence the number of days.
+            var february = (endYear % 4 == 0 && endYear % 100 != 0) || endYear % 400 == 0 ? 29 : 28;
+            var daysOfMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            var startDateNotPassedInEndYear = (endMonth < startMonth) || endMonth == startMonth && endDay < startDay;
+            var years = endYear - startYear - (startDateNotPassedInEndYear ? 1 : 0);
+
+            var months = (12 + endMonth - startMonth - (endDay < startDay ? 1 : 0)) % 12;
+
+            // (12 + ...) % 12 makes sure index is always between 0 and 11
+            var days = startDay <= endDay ? endDay - startDay : daysOfMonth[(12 + endMonth - 1) % 12] - startDay +
+                endDay;
+
+            return {
+                years: years,
+                months: months,
+                days: days
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content">
+            <div id="mainbar-full">
+                <div class="timeline-wrapper">
+                    <div class="timeline">
+                        <header class="header">
+                            <div id="form-section-PersonalInfo">
+                                <div class="display-only">
+                                    <div class="d-inline-block p12 bg-black-025 bar-lg my24 bs-md">
+                                        <img class="d-block bar-sm" src="img/profile-picture.jpg" width="136"
+                                            height="136">
+                                    </div>
+                                    <div class="name">
+                                        <h4>Randi Ortiz</h4>
+                                    </div>
+                                    <div class="job">
+                                        FullStack Developer
+                                    </div>
+                                    <div class="grid jc-center gs16 fc-light fw-wrap">
+                                        <a href="https://goo.gl/maps/rFbzWhpbUnBuv3Tk7" rel="me"
+                                            class="grid ai-center s-link s-link__inherit" target="_blank">
+                                            <div class="grid--cell mr4">
+                                                <svg aria-hidden="true" class="svg-icon iconLocation" width="18"
+                                                    height="18" viewbox="0 0 18 18">
+                                                    <path
+                                                        d="M2 6.38C2 9.91 8.1 17.7 8.1 17.7c.22.29.58.29.8 0 0 0 6.1-7.8 6.1-11.32A6.44 6.44 0 008.5 0 6.44 6.44 0 002 6.38zm9.25.12a2.75 2.75 0 11-5.5 0 2.75 2.75 0 015.5 0z" />
+                                                </svg>
+                                            </div>
+                                            <div class="grid--cell tooltip">
+                                                Sto Dgo, Dominican Republic
+                                                <span class="tooltiptext">Location</span>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/randiortiz" rel="me"
+                                            class="grid ai-center s-link s-link__inherit" target="_blank">
+                                            <div class="grid--cell mr4">
+                                                <svg aria-hidden="true" class="svg-icon iconLink" width="18" height="18"
+                                                    viewbox="0 0 18 18">
+                                                    <path
+                                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                                </svg>
+                                            </div>
+                                            <div class="grid--cell">
+                                                randiortiz
+                                            </div>
+                                        </a>
+                                        <a href="mailto:randiortiz2993@gmail.com" rel="me"
+                                            class="grid ai-center s-link s-link__inherit" target="_blank">
+                                            <div class="grid--cell mr4">
+                                                <svg aria-hidden="true" class="svg-icon iconLink" width="18" height="18"
+                                                    viewBox=" 0 0 256 193">
+                                                    <path fill="#4285F4"
+                                                        d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455h40.727Z" />
+                                                    <path fill="#34A853"
+                                                        d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798v98.91Z" />
+                                                    <path fill="#EA4335"
+                                                        d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z" />
+                                                    <path fill="#FBBC04"
+                                                        d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945l-16.292 12.218Z" />
+                                                    <path fill="#C5221F"
+                                                        d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23v23.273Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="grid--cell">
+                                                randiortiz2993@gmail.com
+                                            </div>
+                                        </a>
+                                        <a href="https://github.com/randi2993" rel="me"
+                                            class="grid ai-center s-link s-link__inherit" target="_blank">
+                                            <div class="grid--cell mr4"><svg aria-hidden="true"
+                                                    class="svg-icon iconGitHub" width="18" height="18"
+                                                    viewbox="0 0 18 18">
+                                                    <path
+                                                        d="M9 1a8 8 0 00-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 009 1z"
+                                                        fill="#010101" /></svg></div>
+                                            <div class="grid--cell tooltip">
+                                                @randi2993
+                                                <span class="tooltiptext">Github</span>
+                                            </div>
+                                        </a>
+                                        <a href="https://stackoverflow.com/users/9056410/randi-ortiz" rel="me"
+                                            class="grid ai-center s-link s-link__inherit" target="_blank">
+                                            <div class="grid--cell mr4"><svg aria-hidden="true"
+                                                    class="svg-icon iconGitHub" width="18" height="18"
+                                                    viewbox="0 0 18 18">
+                                                    <path
+                                                        d="M3.857 13.145h7.137v-1.428H3.857v1.428zM10.254 0 9.108.852l4.26 5.727 1.146-.852L10.254 0zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
+                                                </svg></div>
+                                            <div class="grid--cell">
+                                                @randi2993
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="form-section-TechStack">
+                                <div>
+                                    <div class="user-technologies">
+                                        <label>Knowledge List</label>
+                                        <div>
+                                            <span class="post-tag">git</span>
+                                            <span class="post-tag">api-rest</span>
+                                            <span class="post-tag">api-soap</span>
+                                            <span class="post-tag">c#</span>
+                                            <span class="post-tag">net-core</span>
+                                            <span class="post-tag">net-framework</span>
+                                            <span class="post-tag">entity-framework</span>
+                                            <span class="post-tag">javascript</span>
+                                            <span class="post-tag">angular</span>
+                                            <span class="post-tag">t-sql</span>
+                                            <span class="post-tag">oracle</span>
+                                            <span class="post-tag">mysql</span>
+                                            <span class="post-tag">azure</span>
+                                            <span class="post-tag">jenkins</span>
+                                            <span class="post-tag">nexus</span>
+                                            <span class="post-tag">postman</span>
+                                            <span class="post-tag">soapui</span>
+                                            <span class="post-tag">scrum</span>
+                                        </div>
+                                        <br>
+                                        <label>Open to learn and work with</label>
+                                        <div>
+                                            <span class="post-tag">docker</span>
+                                            <span class="post-tag">react</span>
+                                            <span class="post-tag">android</span>
+                                            <span class="post-tag">openshift</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="timeline-feed">
+                            <div class="timeline-line"></div>
+                            <!-- /timeline-item -->
+                            <div id="item-1" class="timeline-item job">
+                                <header>
+                                    Position &#8226; Oct 2018 &#x2192; Current
+                                    <script>
+                                        var result = getDateDifference(new Date(2018, 10, 22), new Date());
+                                        document.write('(' + result.years + ' years, ' + result.months +
+                                            ' months)');
+                                    </script>
+                                </header>
+                                <div class="timeline-item-content ">
+                                    <div class="js-listcard-container"></div>
+                                    <div class="g-center img logo logo-blank js-logo-blank dno align-self "
+                                        data-list-url="">
+                                        <svg aria-hidden="true" class="svg-icon iconIndustry" width="18" height="18"
+                                            viewbox="0 0 18 18">
+                                            <path
+                                                d="M10 16v-4H8v4H2V4c0-1.1.9-2 2-2h6c1.09 0 2 .91 2 2v2h2c1.09 0 2 .91 2 2v8h-6zM4 4v2h2V4H4zm0 4v2h2V8H4zm4-4v2h2V4H8zm0 4v2h2V8H8zm-4 4v2h2v-2H4zm8 0v2h2v-2h-2zm0-4v2h2V8h-2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="img logo align-self">
+                                        <img src="img/claro.png" alt="Claro Dominicana" class="js-list-img" />
+                                    </div>
+                                    <div class="timeline-item-text">
+                                        <div class="timeline-item-title">
+                                            FullStack Engineer at
+                                            <span class="js-listcard-hover">
+                                                <a href="https://www.claro.com.do" target="_blank">Claro Dominicana</a>
+                                            </span>
+                                        </div>
+                                        <br>
+                                        <div class="timeline-item-content">
+                                            <ul>
+                                                <li>
+                                                    Design, code, build, debug and maintain applications in .NET and
+                                                    Angular
+                                                </li>
+                                                <li>
+                                                    Respond user requirements to applications under my responsibility
+                                                </li>
+                                                <li>
+                                                    Identify and fix possible bugs in my team apps
+                                                </li>
+                                                <li>
+                                                    Identify improvements and advise to the team
+                                                </li>
+                                                <li>
+                                                    Ensure the best possible performance, quality to applications on my
+                                                    team
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="timeline-item-tags grid gs4 fl-none fw-wrap mt16">
+                                            <span class="grid--cell s-tag">git</span>
+                                            <span class="grid--cell s-tag">api-rest</span>
+                                            <span class="grid--cell s-tag">api-soap</span>
+                                            <span class="grid--cell s-tag">c#</span>
+                                            <span class="grid--cell s-tag">net-core</span>
+                                            <span class="grid--cell s-tag">net-framework</span>
+                                            <span class="grid--cell s-tag">entity-framework</span>
+                                            <span class="grid--cell s-tag">javascript</span>
+                                            <span class="grid--cell s-tag">angular</span>
+                                            <span class="grid--cell s-tag">t-sql</span>
+                                            <span class="grid--cell s-tag">oracle</span>
+                                            <span class="grid--cell s-tag">azure</span>
+                                            <span class="grid--cell s-tag">jenkins</span>
+                                            <span class="grid--cell s-tag">nexus</span>
+                                            <span class="grid--cell s-tag">postman</span>
+                                            <span class="grid--cell s-tag">soapui</span>
+                                            <span class="grid--cell s-tag">scrum</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /timeline-item -->
+                            <div id="item-2" class="timeline-item job">
+                                <header>
+                                    Position &#8226; Aug 2022 &#x2192; Current
+                                    <script>
+                                        var result = getDateDifference(new Date(2022, 08, 15), new Date());
+                                        document.write('(' + result.years + ' years, ' + result.months +
+                                            ' months)');
+                                    </script>
+                                </header>
+                                <div class="timeline-item-content ">
+                                    <div class="js-listcard-container"></div>
+                                    <div class="g-center img logo logo-blank js-logo-blank dno align-self "
+                                        data-list-url="">
+                                        <svg aria-hidden="true" class="svg-icon iconIndustry" width="18" height="18"
+                                            viewbox="0 0 18 18">
+                                            <path
+                                                d="M10 16v-4H8v4H2V4c0-1.1.9-2 2-2h6c1.09 0 2 .91 2 2v2h2c1.09 0 2 .91 2 2v8h-6zM4 4v2h2V4H4zm0 4v2h2V8H4zm4-4v2h2V4H8zm0 4v2h2V8H8zm-4 4v2h2v-2H4zm8 0v2h2v-2h-2zm0-4v2h2V8h-2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="img logo align-self">
+                                        <img src="img/bairesdev.png" alt="Claro Dominicana" class="js-list-img" />
+                                    </div>
+                                    <div class="timeline-item-text">
+                                        <div class="timeline-item-title">
+                                            Software Engineer at
+                                            <span class="js-listcard-hover">
+                                                <a href="https://www.bairesdev.com" target="_blank">BairesDev</a>
+                                            </span>
+                                        </div>
+                                        <br>
+                                        <div class="timeline-item-content">
+                                            <ul>
+                                                <li>
+                                                    Design, code, build, debug and maintain applications in c# .NET
+                                                </li>
+                                                <li>
+                                                    Respond user requirements to applications under my responsibility
+                                                </li>
+                                                <li>
+                                                    Identify and fix possible bugs in my team apps
+                                                </li>
+                                                <li>
+                                                    Identify improvements and advise to the team
+                                                </li>
+                                                <li>
+                                                    Ensure the best possible performance, quality to applications on my
+                                                    team
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="timeline-item-tags grid gs4 fl-none fw-wrap mt16">
+                                            <span class="grid--cell s-tag">git</span>
+                                            <span class="grid--cell s-tag">api-rest</span>
+                                            <span class="grid--cell s-tag">c#</span>
+                                            <span class="grid--cell s-tag">net-framework</span>
+                                            <span class="grid--cell s-tag">entity-framework</span>
+                                            <span class="grid--cell s-tag">t-sql</span>
+                                            <span class="grid--cell s-tag">azure</span>
+                                            <span class="grid--cell s-tag">azure-key-vault</span>
+                                            <span class="grid--cell s-tag">azure-resources</span>
+                                            <span class="grid--cell s-tag">azure-sql</span>
+                                            <span class="grid--cell s-tag">postman</span>
+                                            <span class="grid--cell s-tag">scrum</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /timeline-item -->
+                            <div id="item-3" class="timeline-item project github">
+                                <header>
+                                    Open Source &#8226; Jul 2020 &#x2192; Current
+                                    <script>
+                                        var result = getDateDifference(new Date(2020, 07, 28), new Date(2023, 2,
+                                            24));
+                                        document.write('(' + result.years + ' years, ' + result.months +
+                                            ' months)');
+                                    </script>
+                                </header>
+                                <div class="timeline-item-content with-description">
+                                    <div class="img logo"></div>
+                                    <div class="timeline-item-text">
+                                        <div class="timeline-item-title">
+                                            <a href="https://github.com/randi2993/JWTokenAuth">JWTokenAuth</a>
+                                        </div>
+                                        <br>
+                                        <div class="timeline-item-paragraph">
+                                            <div class="description">
+                                                <input class="dno description-expander"
+                                                    id="item-1162429-collapsible-description" type="checkbox" />
+                                                <span class="description-content-full">
+                                                    <p>Basic JWToken auth that can be used as a template for a project
+                                                        that use JWT authentication</p>
+                                                </span>
+                                                <span class="description-content-truncated">
+                                                    <p>Basic JWToken auth that can be used as a template for a project
+                                                        that use JWT authentication</p>
+                                                </span>
+                                                <label class="description-expander-label"
+                                                    for="item-1162429-collapsible-description" data-less="Less"
+                                                    data-more="Read more"></label>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item-tags grid gs4 fl-none fw-wrap mt16">
+                                            <span class="grid--cell s-tag">git</span>
+                                            <span class="grid--cell s-tag">api-rest</span>
+                                            <span class="grid--cell s-tag">c#</span>
+                                            <span class="grid--cell s-tag">net-framework</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /timeline-item -->
+                            <div id="item-4" class="timeline-item job">
+                                <header>
+                                    Position &#8226; Mar 2018 &#x2192; Oct 2018
+                                    <script>
+                                        var result = getDateDifference(new Date(2018, 03, 15), new Date(2018, 10,
+                                            22));
+                                        document.write('(' + result.years + ' years, ' + result.months +
+                                            ' months)');
+                                    </script>
+                                </header>
+                                <div class="timeline-item-content ">
+                                    <div class="js-listcard-container"></div>
+                                    <div class="g-center img logo logo-blank js-logo-blank dno align-self "
+                                        data-list-url="">
+                                        <svg aria-hidden="true" class="svg-icon iconIndustry" width="18" height="18"
+                                            viewbox="0 0 18 18">
+                                            <path
+                                                d="M10 16v-4H8v4H2V4c0-1.1.9-2 2-2h6c1.09 0 2 .91 2 2v2h2c1.09 0 2 .91 2 2v8h-6zM4 4v2h2V4H4zm0 4v2h2V8H4zm4-4v2h2V4H8zm0 4v2h2V8H8zm-4 4v2h2v-2H4zm8 0v2h2v-2h-2zm0-4v2h2V8h-2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="img logo align-self">
+                                        <img src="img/newtech.png" alt="Newtech" class="js-list-img" />
+                                    </div>
+                                    <div class="timeline-item-text">
+                                        <div class="timeline-item-title">
+                                            FullStack Engineer at
+                                            <span class="js-listcard-hover">
+                                                <a href="https://www.newtechsa.com" target="_blank">Newtech</a>
+                                            </span>
+                                        </div>
+                                        <br>
+                                        <div class="timeline-item-content">
+                                            <ul>
+                                                <li>
+                                                    Design, code, build, debug and maintain applications in .NET and
+                                                    Angular
+                                                </li>
+                                                <li>
+                                                    Respond user requirements to applications under my responsibility
+                                                </li>
+                                                <li>
+                                                    Identify and fix possible bugs in my team apps
+                                                </li>
+                                                <li>
+                                                    Identify improvements and advise to the team
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="timeline-item-tags grid gs4 fl-none fw-wrap mt16">
+                                            <span class="grid--cell s-tag">git</span>
+                                            <span class="grid--cell s-tag">api-rest</span>
+                                            <span class="grid--cell s-tag">api-soap</span>
+                                            <span class="grid--cell s-tag">c#</span>
+                                            <span class="grid--cell s-tag">net-framework</span>
+                                            <span class="grid--cell s-tag">entity-framework</span>
+                                            <span class="grid--cell s-tag">javascript</span>
+                                            <span class="grid--cell s-tag">angular</span>
+                                            <span class="grid--cell s-tag">t-sql</span>
+                                            <span class="grid--cell s-tag">oracle</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /timeline-item -->
+                            <div id="item-5" class="timeline-item job">
+                                <header>
+                                    Position &#8226; Sep 2017 &#x2192; Mar 2018
+                                    <script>
+                                        var result = getDateDifference(new Date(2017, 09, 15), new Date(2018, 03,
+                                            15));
+                                        document.write('(' + result.years + ' years, ' + result.months +
+                                            ' months)');
+                                    </script>
+                                </header>
+                                <div class="timeline-item-content ">
+                                    <div class="js-listcard-container"></div>
+                                    <div class="g-center img logo logo-blank js-logo-blank dno align-self "
+                                        data-list-url="">
+                                        <svg aria-hidden="true" class="svg-icon iconIndustry" width="18" height="18"
+                                            viewbox="0 0 18 18">
+                                            <path
+                                                d="M10 16v-4H8v4H2V4c0-1.1.9-2 2-2h6c1.09 0 2 .91 2 2v2h2c1.09 0 2 .91 2 2v8h-6zM4 4v2h2V4H4zm0 4v2h2V8H4zm4-4v2h2V4H8zm0 4v2h2V8H8zm-4 4v2h2v-2H4zm8 0v2h2v-2h-2zm0-4v2h2V8h-2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="img logo align-self">
+                                        <img src="img/onemax.png" alt="Newtech" class="js-list-img" />
+                                    </div>
+                                    <div class="timeline-item-text">
+                                        <div class="timeline-item-title">
+                                            Web Developer at
+                                            <span class="js-listcard-hover">
+                                                <a href="https://onemax.com" target="_blank">Onemax</a>
+                                            </span>
+                                        </div>
+                                        <br>
+                                        <div class="timeline-item-content">
+                                            <ul>
+                                                <li>
+                                                    Build programs, applications, and analyze the requirements of the
+                                                    company
+                                                </li>
+                                                <li>
+                                                    Web Development
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="timeline-item-tags grid gs4 fl-none fw-wrap mt16">
+                                            <span class="grid--cell s-tag">git</span>
+                                            <span class="grid--cell s-tag">php</span>
+                                            <span class="grid--cell s-tag">codeigniter</span>
+                                            <span class="grid--cell s-tag">mysql</span>
+                                            <span class="grid--cell s-tag">mysql-workbench</span>
+                                            <span class="grid--cell s-tag">perl</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+            <div class="site-footer--copyright fs-fine">
+                <ul class="-list">
+                    Using
+                    <a href="https://meta.stackoverflow.com/questions/415293/sunsetting-jobs-developer-story"
+                        target="_blank">
+                        &nbsp; discontinue stackoverflow story &nbsp;
+                    </a>
+                    as a template
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
