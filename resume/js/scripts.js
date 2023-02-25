@@ -1,5 +1,5 @@
-function sortJSONByDate(a) {
-    return new Date().getDate() - new Date(a["start-date"]).getDate();
+function sortJSONByDate(a,b) {
+    return new Date(b["start-date"]).getTime() - new Date(a["start-date"]).getTime();
 }
 
 function getDateDifference(startDate, endDate) { // @see https://stackoverflow.com/a/51441904/9056410
