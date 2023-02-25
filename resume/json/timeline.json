@@ -1,0 +1,149 @@
+[
+    {
+        "name": "Claro",
+        "role": "FullStack Engineer",
+        "start-date": "10-22-2018",
+        "end-date": "",
+        "picture": "img/claro.png",
+        "url": "https://www.claro.com.do/personas",
+        "is-current": true,
+        "is-job": true,
+        "is-git-project": false,
+        "is-educational": false,
+        "description": [
+            "Design, code, build, debug and maintain applications in .NET and Angular",
+            "Respond user requirements to applications under my responsibility",
+            "Identify and fix possible bugs in my team apps",
+            "Identify improvements and advise to the team",
+            "Ensure the best possible performance, quality to applications on my team"
+        ],
+        "techs": [
+            "git",
+            "api-rest",
+            "api-soap",
+            "c#",
+            "net-core",
+            "net-framework",
+            "entity-framework",
+            "javascript",
+            "angular",
+            "t-sql",
+            "oracle",
+            "azure",
+            "jenkins",
+            "nexus",
+            "postman",
+            "soapui",
+            "scrum"
+        ]
+    },
+    {
+        "name": "BairesDev",
+        "role": "Software Engineer",
+        "start-date": "08-15-2022",
+        "end-date": "",
+        "picture": "img/bairesdev.png",
+        "url": "https://www.bairesdev.com",
+        "is-current": true,
+        "is-job": true,
+        "is-git-project": false,
+        "is-educational": false,
+        "description": [
+            "Design, code, build, debug and maintain applications in .NET and Angular",
+            "Respond user requirements to applications under my responsibility",
+            "Identify and fix possible bugs in my team apps",
+            "Identify improvements and advise to the team",
+            "Ensure the best possible performance, quality to applications on my team"
+        ],
+        "techs": [
+            "git",
+            "api-rest",
+            "api-soap",
+            "c#",
+            "net-core",
+            "entity-framework",
+            "t-sql",
+            "azure",
+            "azure-key-vault",
+            "azure-resources",
+            "azure-sql",
+            "postman",
+            "scrum"
+        ]
+    },
+    {
+        "name": "Newtech",
+        "role": "FullStack Engineer",
+        "start-date": "03-15-2018",
+        "end-date": "10-22-2018",
+        "picture": "img/newtech.png",
+        "url": "https://newtechsa.com",
+        "is-current": false,
+        "is-job": true,
+        "is-git-project": false,
+        "is-educational": false,
+        "description": [
+            "Design, code, build, debug and maintain applications in .NET and Angular",
+            "Respond user requirements to applications under my responsibility",
+            "Identify and fix possible bugs in my team apps",
+            "Identify improvements and advise to the team"
+        ],
+        "techs": [
+            "git",
+            "api-rest",
+            "api-soap",
+            "c#",
+            "net-framework",
+            "entity-framework",
+            "javascript",
+            "angular",
+            "t-sql",
+            "oracle"
+        ]
+    },
+    {
+        "name": "Onemax",
+        "role": "Web Developer",
+        "start-date": "09-15-2017",
+        "end-date": "03-15-2018",
+        "picture": "img/onemax.png",
+        "url": "https://onemax.com",
+        "is-current": false,
+        "is-job": true,
+        "is-git-project": false,
+        "is-educational": false,
+        "description": [
+            "Build programs, applications, and analyze the requirements of the company",
+            "Web Development"
+        ],
+        "techs": [
+            "git",
+            "php",
+            "codeigniter",
+            "mysql",
+            "mysql-workbench",
+            "perl"
+        ]
+    },
+    {
+        "name": "JWToken",
+        "role": "",
+        "start-date": "07-28-2020",
+        "end-date": "",
+        "picture": "",
+        "url": "https://github.com/randi2993/JWTokenAuth",
+        "is-current": true,
+        "is-job": false,
+        "is-github": true,
+        "is-educational": false,
+        "description": [
+            "Basic JWToken auth that can be used as a template for a project that use JWT authentication"
+        ],
+        "techs": [
+            "git",
+            "api-rest",
+            "c#",
+            "net-framework"
+        ]
+    }
+]

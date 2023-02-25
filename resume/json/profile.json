@@ -1,0 +1,38 @@
+{
+    "name": "Randi Ortiz",
+    "role": "FullStack Developer",
+    "linkedin": "randiortiz",
+    "stackoverflow": "9056410/randi-ortiz",
+    "github": "randi2993",
+    "email": "randiortiz2993@gmail.com",
+    "location": {
+        "name": "Sto Dgo, Dominican Republic",
+        "google-maps-link": "https://goo.gl/maps/rFbzWhpbUnBuv3Tk7"
+    },
+    "knowledge": [
+        "git",
+        "api-rest",
+        "api-soap",
+        "c#",
+        "net-core",
+        "net-framework",
+        "entity-framework",
+        "javascript",
+        "angular",
+        "t-sql",
+        "oracle",
+        "mysql",
+        "azure",
+        "jenkins",
+        "nexus",
+        "postman",
+        "soapui",
+        "scrum"
+    ],
+    "open-to-learn-work": [
+        "docker",
+        "react",
+        "android",
+        "openshift"
+    ]
+}
