@@ -9,26 +9,6 @@
         "name": "Sto Dgo, Dominican Republic",
         "google-maps-link": "https://goo.gl/maps/rFbzWhpbUnBuv3Tk7"
     },
-    "knowledge": [
-        "git",
-        "api-rest",
-        "api-soap",
-        "c#",
-        "net-core",
-        "net-framework",
-        "entity-framework",
-        "javascript",
-        "angular",
-        "t-sql",
-        "oracle",
-        "mysql",
-        "azure",
-        "jenkins",
-        "nexus",
-        "postman",
-        "soapui",
-        "scrum"
-    ],
     "open-to-learn-work": [
         "docker",
         "react",

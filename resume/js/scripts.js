@@ -1,4 +1,4 @@
-function sortJSONByDate(a,b) {
+function sortJSONByDate(a, b) {
     return new Date(b["start-date"]).getTime() - new Date(a["start-date"]).getTime();
 }
 
@@ -34,7 +34,14 @@ function getDateDifference(startDate, endDate) { // @see https://stackoverflow.c
         days: days
     };
 }
+
 $(document).ready(function () {
+    getProfile();
+    getTimeline();
+    loadProfileSkills();
+});
+
+function getProfile() {
 
     $.getJSON("json/profile.json",
         function (profile) {
@@ -79,20 +86,19 @@ $(document).ready(function () {
                 $("#profile-email-text").text(profile.email);
             }
 
-            $.each(profile.knowledge, function (key, item) {
-                $("#knowledge").append('<span class="post-tag">' + item + '</span>');
-            });
-
             $.each(profile["open-to-learn-work"], function (key, item) {
                 $("#open-to-learn-work").append('<span class="post-tag">' + item + '</span>');
             });
         });
 
+}
+
+function getTimeline() {
     $.getJSON("json/timeline.json",
         function (timeline) {
 
             timeline.sort(sortJSONByDate);
-            console.log(timeline);
+            // console.log(timeline);
 
             $.each(timeline, function (key, item) {
                 let type = "";
@@ -174,4 +180,27 @@ $(document).ready(function () {
                 $("#timeline-items-loop").append(html);
             });
         });
-});
+}
+
+function loadProfileSkills() {
+    $.getJSON("json/timeline.json",
+        function (timeline) {
+            var skills = [];
+            var uniqueSkills = [];
+
+            $.each(timeline, function (key, item) {
+
+                $.each(item.techs, function (key_, value) {
+                    skills.push(value);
+                });
+            });
+
+            uniqueSkills = skills.filter((value, index) => skills.indexOf(value) == index); // removing duplicates
+
+            $.each(uniqueSkills, function (key, item) {
+                $("#knowledge").append('<span class="post-tag">' + item + '</span>');
+            });
+            // console.log(skills);
+            // console.log(uniqueSkills);
+        });
+}
