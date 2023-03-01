@@ -49,7 +49,7 @@
         "is-git-project": false,
         "is-educational": false,
         "description": [
-            "Design, code, build, debug and maintain applications in .NET and Angular",
+            "Design, code, build, debug and maintain applications in .NET",
             "Respond user requirements to applications under my responsibility",
             "Identify and fix possible bugs in my team apps",
             "Identify improvements and advise to the team",
@@ -83,7 +83,7 @@
         "is-git-project": false,
         "is-educational": false,
         "description": [
-            "Design, code, build, debug and maintain applications in .NET and Angular",
+            "Design, code, build, debug and maintain applications in .NET and Angular JS",
             "Respond user requirements to applications under my responsibility",
             "Identify and fix possible bugs in my team apps",
             "Identify improvements and advise to the team"
@@ -97,6 +97,7 @@
             "entity-framework",
             "javascript",
             "angular",
+            "angularJS",
             "t-sql",
             "oracle"
         ]
