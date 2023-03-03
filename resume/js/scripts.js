@@ -128,8 +128,10 @@ function getTimeline() {
 
                 if (item['is-current']) {
                     html += "Current";
-                } else
+                } else{
                     date = new Date(item['end-date']);
+                    html +=  item["end-date"];
+                }
 
                 var result = getDateDifference(new Date(item["start-date"]), date);
 
