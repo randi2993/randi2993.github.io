@@ -6,7 +6,7 @@
         "end-date": "05-22-2023",
         "picture": "img/claro.png",
         "url": "https://www.claro.com.do/personas",
-        "is-current": true,
+        "is-current": false,
         "is-job": true,
         "is-git-project": false,
         "is-educational": false,
