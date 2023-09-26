@@ -109,7 +109,7 @@ function getTimeline() {
 
                 if (item['is-job']) {
                     type = "job";
-                    title = "Position";
+                    title = "Job";
                     picture += '<img src="' + item.picture + '" alt="Claro Dominicana" class="js-list-img" />';
                 } else if (item['is-github']) {
                     type = "project github";
