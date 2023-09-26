@@ -110,11 +110,10 @@ function getTimeline() {
                 if (item['is-job']) {
                     type = "job";
                     title = "Position";
-                    title = "Position";
                     picture += '<img src="' + item.picture + '" alt="Claro Dominicana" class="js-list-img" />';
                 } else if (item['is-github']) {
                     type = "project github";
-                    title = "Open Source";
+                    title = "Git Project";
                     at = "";
                 } else if (item['is-educational']) {
                     type = "educational";
