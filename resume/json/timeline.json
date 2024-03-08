@@ -68,7 +68,8 @@
             "azure-resources",
             "azure-sql",
             "postman",
-            "scrum"
+            "scrum",
+            "azure functions"
         ]
     },
     {
