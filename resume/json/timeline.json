@@ -147,5 +147,27 @@
             "c#",
             "net-framework"
         ]
+    },
+    {
+        "name": "Spotify Actions - elGatoStreamDeck+",
+        "role": "",
+        "start-date": "02-25-2026",
+        "end-date": "02-25-2026",
+        "picture": "02-25-2026",
+        "url": "https://github.com/randi2993/spotify-actions",
+        "is-current": false,
+        "is-job": false,
+        "is-github": true,
+        "is-educational": false,
+        "description": [
+            "Spotify Actions to be used on elGato Stream Deck"
+        ],
+        "techs": [
+            "typescript",
+            "html",
+            "js",
+            "vscode",
+            "stream-deck-sdk"
+        ]
     }
 ]
