@@ -8,7 +8,7 @@
         "url": "https://www.claro.com.do/personas",
         "is-current": true,
         "is-job": true,
-        "is-git-project": false,
+        "is-github": false,
         "is-educational": false,
         "description": [
             "Design, code, build, debug and maintain applications in .NET and Angular",
@@ -46,7 +46,7 @@
         "url": "https://www.bairesdev.com",
         "is-current": false,
         "is-job": true,
-        "is-git-project": false,
+        "is-github": false,
         "is-educational": false,
         "description": [
             "Design, code, build, debug and maintain applications in .NET",
@@ -81,7 +81,7 @@
         "url": "https://newtechsa.com",
         "is-current": false,
         "is-job": true,
-        "is-git-project": false,
+        "is-github": false,
         "is-educational": false,
         "description": [
             "Design, code, build, debug and maintain applications in .NET and Angular JS",
@@ -112,7 +112,7 @@
         "url": "https://onemax.com",
         "is-current": false,
         "is-job": true,
-        "is-git-project": false,
+        "is-github": false,
         "is-educational": false,
         "description": [
             "Build programs, applications, and analyze the requirements of the company",
