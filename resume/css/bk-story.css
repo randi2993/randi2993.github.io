@@ -325,7 +325,7 @@ a.story-tab:not(.has-icon) span.icon-warning-label {
     top: 10px
 }
 
-.icon-github,
+/* .icon-github,
 .icon-twitter {
     background-image: url("/web/20210506171630im_/https://cdn.sstatic.net/Img/user-profile-sprite.png?v=6829b895a42c");
     background-image: url("/web/20210506171630im_/https://cdn.sstatic.net/Img/user-profile-sprite.svg?v=d88bb7069e3d"), none;
@@ -333,7 +333,7 @@ a.story-tab:not(.has-icon) span.icon-warning-label {
     width: 12px;
     height: 14px;
     vertical-align: middle
-}
+} */
 
 .icon-github {
     background-position: 0 -114px
@@ -2110,7 +2110,7 @@ a.story-tab:not(.has-icon) span.icon-warning-label {
 .timeline-item.gitlab:before {
     background-position: 6px -55px
 }
-
+/* 
 .timeline-item.github .img.logo:before,
 .timeline-item.google .img.logo:before,
 .timeline-item.bitbucket .img.logo:before,
@@ -2125,7 +2125,7 @@ a.story-tab:not(.has-icon) span.icon-warning-label {
     height: 40px;
     background-image: url("../img/svg/timeline.svg"), none;
     background-repeat: no-repeat
-}
+} */
 
 .timeline-item.github .img.logo~header,
 .timeline-item.google .img.logo~header,
