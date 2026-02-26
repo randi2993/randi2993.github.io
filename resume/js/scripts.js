@@ -1,5 +1,22 @@
 function sortJSONByDate(a, b) {
-    return new Date(b["start-date"]).getTime() - new Date(a["start-date"]).getTime();
+    // 1) Los current siempre van arriba
+    const aCurrent = !!a["is-current"];
+    const bCurrent = !!b["is-current"];
+
+    if (aCurrent !== bCurrent) {
+        return aCurrent ? -1 : 1; // true primero
+    }
+
+    // 2) Si ambos son current o ambos no lo son, ordenar por start-date (desc)
+    const aTime = new Date(a["start-date"]).getTime();
+    const bTime = new Date(b["start-date"]).getTime();
+
+    // si alguna fecha es inválida, la mandamos al final
+    if (Number.isNaN(aTime) && Number.isNaN(bTime)) return 0;
+    if (Number.isNaN(aTime)) return 1;
+    if (Number.isNaN(bTime)) return -1;
+
+    return bTime - aTime;
 }
 
 function getDateDifference(startDate, endDate) { // @see https://stackoverflow.com/a/51441904/9056410
