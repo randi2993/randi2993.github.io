@@ -124,11 +124,11 @@ function getTimeline() {
                 let gitPicture = "";
                 var at = " at ";
                 var date = new Date();
+                picture = '<img src="' + item.picture + '" alt="undefined" class="js-list-img" />';
 
                 if (item['is-job']) {
                     type = "job";
                     title = "Job";
-                    picture = '<img src="' + item.picture + '" alt="undefined" class="js-list-img" />';
                 } else if (item['is-github']) {
                     type = "project github";
                     title = "Git Project";
@@ -145,9 +145,9 @@ function getTimeline() {
 
                 if (item['is-current']) {
                     html += "Current";
-                } else{
+                } else {
                     date = new Date(item['end-date']);
-                    html +=  item["end-date"];
+                    html += item["end-date"];
                 }
 
                 var result = getDateDifference(new Date(item["start-date"]), date);
@@ -157,11 +157,6 @@ function getTimeline() {
                 html += '</header>';
                 html += '<div class="timeline-item-content ">';
                 html += '<div class="js-listcard-container"></div>';
-                html += '<div class="g-center img logo logo-blank js-logo-blank dno align-self " data-list-url="">';
-                html += '<svg aria-hidden="true" class="svg-icon iconIndustry" width="18" height="18" viewbox="0 0 18 18">';
-                html += '<path d="M10 16v-4H8v4H2V4c0-1.1.9-2 2-2h6c1.09 0 2 .91 2 2v2h2c1.09 0 2 .91 2 2v8h-6zM4 4v2h2V4H4zm0 4v2h2V8H4zm4-4v2h2V4H8zm0 4v2h2V8H8zm-4 4v2h2v-2H4zm8 0v2h2v-2h-2zm0-4v2h2V8h-2z" />';
-                html += '</svg>';
-                html += '</div>';
                 html += '<div class="img logo align-self">';
                 html += picture;
                 html += '</div>';
