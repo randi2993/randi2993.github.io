@@ -176,7 +176,7 @@
         "role": "Developer",
         "start-date": "01-25-2025",
         "end-date": "01-25-2025",
-        "picture": "img/claro.png",
+        "picture": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg",
         "url": "https://github.com/randi2993/AmazonTransactionCounter-ChromeExtension",
         "is-current": false,
         "is-job": false,
