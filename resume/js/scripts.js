@@ -121,17 +121,18 @@ function getTimeline() {
                 let type = "";
                 let title = "";
                 let picture = "";
+                let gitPicture = "";
                 var at = " at ";
                 var date = new Date();
 
                 if (item['is-job']) {
                     type = "job";
                     title = "Job";
-                    picture += '<img src="' + item.picture + '" alt="Claro Dominicana" class="js-list-img" />';
+                    picture = '<img src="' + item.picture + '" alt="undefined" class="js-list-img" />';
                 } else if (item['is-github']) {
                     type = "project github";
                     title = "Git Project";
-                    at = "";
+                    at = " - ";
                 } else if (item['is-educational']) {
                     type = "educational";
                     title = "Education";
