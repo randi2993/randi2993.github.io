@@ -166,8 +166,31 @@
             "typescript",
             "html",
             "js",
+            "css",
             "vscode",
             "stream-deck-sdk"
+        ]
+    },
+    {
+        "name": "AmazonTransactionCounter-ChromeExtension",
+        "role": "",
+        "start-date": "01-25-2025",
+        "end-date": "01-25-2025",
+        "picture": "01-25-2025",
+        "url": "https://github.com/randi2993/AmazonTransactionCounter-ChromeExtension",
+        "is-current": false,
+        "is-job": false,
+        "is-github": true,
+        "is-educational": false,
+        "description": [
+            "Count the total transactions on your Amazon account"
+        ],
+        "techs": [
+            "typescript",
+            "html",
+            "js",
+            "scss",
+            "vscode"
         ]
     }
 ]
